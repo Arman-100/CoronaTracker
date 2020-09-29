@@ -47,23 +47,23 @@ function UnitedStates() {
         <h1 className="factsTitle">Relative Severity Facts</h1>
         <ul>
           <li>
-            The death count of CoronaVirus is equivalent to{" "}
+            The death count of CoronaVirus is more than{" "}
             {parseInt(dead / deathCount911)} Septermber 11 deaths.
           </li>
           <li>
-            The death count of CoronaVirus is equivalent to{" "}
+            The death count of CoronaVirus is more than{" "}
             {parseInt(dead / polioDeathCount)} times the number of people who
-            suffered and passed away painfully from Polio.
+            suffered and died painfully from Polio.
           </li>
           <li>
-            The death count of CoronaVirus is equivalent to having{" "}
-            {parseInt(dead / swineFluDeathCount)} swine flu (H1N1) outbreaks
-            back to back.
+            The death count of CoronaVirus is more than{" "}
+            {parseInt(dead / swineFluDeathCount)} times the number of people who
+            died from swine flu (H1N1).
           </li>
           <li>
-            The death count of CoronaVirus is equivalent to{" "}
+            The death count of CoronaVirus is more than{" "}
             {parseInt(dead / choleraDeathCount)} times the people who died to
-            cholera..
+            cholera.
           </li>
         </ul>
       </div>

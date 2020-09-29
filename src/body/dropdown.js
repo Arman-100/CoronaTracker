@@ -57,10 +57,10 @@ const usStates = [
 
 function DropDown() {
   return (
-    <div class="select">
+    <div className="select">
       <select name="slct" id="slct">
         {usStates.map((state) => {
-          return <option>{state.name}</option>;
+          return <option key={state.abbreviation}>{state.name}</option>;
         })}
       </select>
     </div>
