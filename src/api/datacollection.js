@@ -90,3 +90,13 @@ export async function getDuvalData() {
     console.error(err);
   }
 }
+
+export async function getCountyData() {
+  try {
+    const { data } = await axios.get(`${URL}/cities`);
+    console.log(data.data);
+    return data.data;
+  } catch (err) {
+    console.log(err);
+  }
+}
