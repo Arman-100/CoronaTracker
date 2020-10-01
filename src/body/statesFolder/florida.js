@@ -6,8 +6,10 @@ import {
 } from "../../api/datacollection";
 import { dataOrganize } from "../countyfolder/dataOrganize";
 import "../countyfolder/countyCard.scss";
+const stateName = "florida";
 
 function Florida() {
+  console.log(stateName);
   const [counties, setCounties] = useState([]);
   const [confirmed, setConfirmed] = useState("0");
   const [dead, setDead] = useState("0");
@@ -16,7 +18,7 @@ function Florida() {
 
   useEffect(() => {
     console.log("useeffect called");
-    dataOrganize("florida")
+    dataOrganize(stateName)
       .then((response) => {
         setCounties(response);
         setLoad(true);
@@ -28,11 +30,9 @@ function Florida() {
   }, []);
 
   useEffect(() => {
-    getStateDataConfirmed("Florida").then(setConfirmed);
-    getStateDataDead("Florida").then(setDead);
+    getStateDataConfirmed(stateName).then(setConfirmed);
+    getStateDataDead(stateName).then(setDead);
   }, []);
-
-  console.log(counties, "check");
 
   if (load) {
     return (

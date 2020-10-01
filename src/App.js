@@ -1,5 +1,4 @@
 import React from "react";
-import { getCountyData } from "./api/datacollection";
 
 import UnitedStates from "./body/UnitedStates";
 import Header from "./header/Header";
@@ -112,7 +111,6 @@ function App() {
         <Route path="/WestVirginia" exact component={WestVirginia}></Route> 
         <Route path="/Wisconson" exact component={Wisconson}></Route> 
         <Route path="/Wyoming" exact component={Wyoming}></Route>
-        <h1 onClick={getCountyData}>click</h1>
       </div>
     </Router>
   );
