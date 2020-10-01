@@ -46,7 +46,7 @@ export async function getStateDataConfirmed(state) {
   try {
     const { data } = await axios.get(`${URL}/provinces/${state}`);
     const result = await data;
-    console.log("getStateData -> result", result.data[0].confirmed);
+    // console.log("getStateData -> result", result.data[0].confirmed);
     return result.data[0].confirmed;
   } catch (err) {
     console.error(err);
@@ -56,7 +56,7 @@ export async function getStateDataDead(state) {
   try {
     const { data } = await axios.get(`${URL}/provinces/${state}`);
     const result = await data;
-    console.log("getStateData -> result", result.data[0].dead);
+    // console.log("getStateData -> result", result.data[0].dead);
     return result.data[0].dead;
   } catch (err) {
     console.error(err);
@@ -91,10 +91,10 @@ export async function getDuvalData() {
   }
 }
 
-export async function getCountyData() {
+export async function getCountyData(state) {
   try {
-    const { data } = await axios.get(`${URL}/cities`);
-    console.log(data.data);
+    const { data } = await axios.get(`${URL}/cities/${state}`);
+    // console.log(data.data);
     return data.data;
   } catch (err) {
     console.log(err);

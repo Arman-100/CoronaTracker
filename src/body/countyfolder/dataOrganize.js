@@ -1,10 +1,7 @@
-import React from "react";
 import { getCountyData } from "../../api/datacollection";
 
-function createList() {
-  //   const [usCounties, setUsCounties] = useState([]);
-
-  return <div></div>;
+export async function dataOrganize(state) {
+  let result = await getCountyData(state);
+  //   console.log(result);
+  return result;
 }
-
-export default createList;
