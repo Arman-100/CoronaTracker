@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DropDown from "../dropdown";
+
 import {
   getStateDataConfirmed,
   getStateDataDead,
@@ -38,8 +38,9 @@ function Alaska() {
     return (
       <div>
         <div className="stateContainer">
+          <div className="stateTitle">{stateName}</div>
+
           <div className="info">
-            <DropDown />
             <p className="status confirmed">
               Confirmed: <br />
               {!confirmed ? "Information not available" : confirmed}
@@ -62,7 +63,7 @@ function Alaska() {
               ) {
                 return (
                   <div className="card" key={index}>
-                    <h2>{county.location.split(",")[0]}</h2>
+                    <h3>{county.location.split(",")[0]}</h3>
                     <p>confirmed: {county.confirmed}</p>
                     <p>dead: {county.dead}</p>
                   </div>

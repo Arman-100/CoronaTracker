@@ -2,6 +2,8 @@
 
 .header-container {
   background-color: rgb(255, 236, 127);
+  display: flex;
+  justify-content: space-around;
 }
 
 .title {
@@ -12,4 +14,12 @@
   font-family: "Archivo Black", sans-serif;
   letter-spacing: 0.3em;
   word-spacing: 0.7em;
+}
+
+.select {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  justify-self: center;
+  align-self: center;
 }

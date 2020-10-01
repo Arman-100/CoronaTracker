@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const usStates = [
   { name: "UNITED STATES", abbreviation: "US" },
@@ -60,6 +60,12 @@ function goToSite() {
 }
 
 function DropDown() {
+  const [visual, setVisual] = useState("");
+  useEffect(() => {
+    let curr = window.location.href.split("/")[3];
+    console.log("state", visual);
+    setVisual(curr);
+  }, [visual]);
   return (
     <div className="select">
       <select className="selectDropdown" id="selectDropdown">

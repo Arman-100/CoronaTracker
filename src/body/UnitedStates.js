@@ -6,7 +6,6 @@ import {
 } from "../api/datacollection";
 import USMap from "../image/download.png";
 import "./UnitedStates.scss";
-import DropDown from "./dropdown";
 
 function UnitedStates() {
   const [confirmed, setconfirmed] = useState("0");
@@ -28,7 +27,6 @@ function UnitedStates() {
       <div className="usmap">
         <img src={USMap} alt="" />
         <div className="info">
-          <DropDown />
           <p className="status confirmed">
             Confirmed: <br />
             {confirmed}

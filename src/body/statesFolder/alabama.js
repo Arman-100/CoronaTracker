@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DropDown from "../dropdown";
+
 import {
   getStateDataConfirmed,
   getStateDataDead,
@@ -9,7 +9,6 @@ import "../countyfolder/countyCard.scss";
 const stateName = "Alabama";
 
 function Alabama() {
-  console.log(stateName);
   const [counties, setCounties] = useState([]);
   const [confirmed, setConfirmed] = useState("0");
   const [dead, setDead] = useState("0");
@@ -38,8 +37,9 @@ function Alabama() {
     return (
       <div>
         <div className="stateContainer">
+          <div className="stateTitle">{stateName}</div>
+
           <div className="info">
-            <DropDown />
             <p className="status confirmed">
               Confirmed: <br />
               {!confirmed ? "Information not available" : confirmed}
@@ -55,7 +55,6 @@ function Alabama() {
             <h1>{error.message}</h1>
           ) : (
             counties.map(function (county, index) {
-              console.log(county.location.split(" ")[0]);
               if (
                 county.location.split(", ")[1] === stateName &&
                 county.location.split(" ")[0] !== "Unassigned" &&
@@ -63,7 +62,7 @@ function Alabama() {
               ) {
                 return (
                   <div className="card" key={index}>
-                    <h2>{county.location.split(",")[0]}</h2>
+                    <h3>{county.location.split(",")[0]}</h3>
                     <p>confirmed: {county.confirmed}</p>
                     <p>dead: {county.dead}</p>
                   </div>

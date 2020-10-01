@@ -1,9 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+
 .countycontainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media screen and (min-width: 1px) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (min-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (min-width: 650px) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (min-width: 780px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: 1600px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .card {
+  border-radius: 0px 51px 0px 51px;
+  -moz-border-radius: 0px 51px 0px 51px;
+  -webkit-border-radius: 0px 51px 0px 51px;
+  border: 0px solid #000000;
+  -webkit-box-shadow: 6px 6px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 2px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +41,23 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  h2 {
+  h3 {
     margin-bottom: 10px;
+    letter-spacing: -0.03em;
+  }
+}
+
+.stateTitle {
+  font-family: "Ultra", serif;
+  text-align: center;
+
+  @media screen and (min-width: 1px) {
+    font-size: 4em;
+  }
+  @media screen and (min-width: 900px) {
+    font-size: 5em;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 6em;
   }
 }
