@@ -55,14 +55,26 @@ const usStates = [
   { name: "WYOMING", abbreviation: "WY" },
 ];
 
+function goToSite() {
+  window.location = document.getElementById("selectDropdown").value;
+}
+
 function DropDown() {
   return (
     <div className="select">
-      <select name="slct" id="slct">
+      <select className="selectDropdown" id="selectDropdown">
         {usStates.map((state) => {
-          return <option key={state.abbreviation}>{state.name}</option>;
+          return (
+            <option
+              key={state.abbreviation}
+              value={`http://localhost:3000/${state.name.split(" ").join("")}`}
+            >
+              {state.name}
+            </option>
+          );
         })}
       </select>
+      <button onClick={goToSite}>Go</button>
     </div>
   );
 }

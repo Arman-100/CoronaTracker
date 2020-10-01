@@ -9,7 +9,6 @@ import "../countyfolder/countyCard.scss";
 const stateName = "New York";
 
 function NewYork() {
-  console.log(stateName);
   const [counties, setCounties] = useState([]);
   const [confirmed, setConfirmed] = useState("0");
   const [dead, setDead] = useState("0");
@@ -54,14 +53,22 @@ function NewYork() {
           {error ? (
             <h1>{error.message}</h1>
           ) : (
-            counties.map((county, index) => {
-              return (
-                <div className="card" key={index}>
-                  <h2>Location: {county.location}</h2>
-                  <p>confirmed: {county.confirmed}</p>
-                  <p>dead: {county.dead}</p>
-                </div>
-              );
+            counties.map(function (county, index) {
+              if (
+                county.location.split(", ")[1] === stateName &&
+                county.location.split(" ")[0] !== "Unassigned" &&
+                county.location.split(" ")[0] !== "Out"
+              ) {
+                return (
+                  <div className="card" key={index}>
+                    <h2>{county.location.split(",")[0]}</h2>
+                    <p>confirmed: {county.confirmed}</p>
+                    <p>dead: {county.dead}</p>
+                  </div>
+                );
+              } else {
+                return null;
+              }
             })
           )}
         </div>
