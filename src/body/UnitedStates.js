@@ -26,7 +26,7 @@ function UnitedStates() {
     <div className="usContainer">
       <div className="usmap">
         <img src={USMap} alt="" />
-        <div className="info">
+        <div className="infoUs">
           <p className="status confirmed">
             Confirmed: <br />
             {confirmed}

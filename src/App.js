@@ -59,6 +59,7 @@ function App() {
     <Router>
       <div className="App">
         <Route path="/" component={Header}></Route>
+        <Route path="/" exact component={UnitedStates}></Route>
         <Route path="/UnitedStates" exact component={UnitedStates}></Route>
         <Route path="/Alabama" exact component={Alabama}></Route>
         <Route path="/Alaska" exact component={Alaska}></Route>
@@ -99,7 +100,7 @@ function App() {
         <Route path="/Oklahoma" exact component={Oklahoma}></Route> 
         <Route path="/Oregon" exact component={Oregon}></Route> 
         <Route path="/Pennsylvania" exact component={Pennsylvania}></Route> 
-        <Route path="/RhoneIsland" exact component={RhodeIsland}></Route> 
+        <Route path="/RhodeIsland" exact component={RhodeIsland}></Route> 
         <Route path="/SouthCarolina" exact component={SouthCarolina}></Route> 
         <Route path="/SouthDakota" exact component={SouthDakota}></Route> 
         <Route path="/Tennessee" exact component={Tennessee}></Route> 

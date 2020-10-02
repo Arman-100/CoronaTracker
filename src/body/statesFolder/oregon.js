@@ -40,12 +40,10 @@ function Oregon() {
           <div className="stateTitle">{stateName}</div>
           <div className="info">
             <p className="status confirmed">
-              Confirmed: <br />
-              {!confirmed ? "Information not available" : confirmed}
+              Confirmed: {!confirmed ? "Information not available" : confirmed}
             </p>
             <p className="status dead">
-              Dead: <br />
-              {!dead ? "Information not available" : dead}
+              Dead: {!dead ? "Information not available" : dead}
             </p>
           </div>
         </div>

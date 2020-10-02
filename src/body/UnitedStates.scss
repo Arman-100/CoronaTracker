@@ -10,11 +10,20 @@ img {
 
 .info {
   display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  p {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.infoUs {
+  display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
 }
-
 .status {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
