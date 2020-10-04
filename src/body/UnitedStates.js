@@ -50,7 +50,7 @@ function UnitedStates() {
         <ul>
           <li>
             The death count of CoronaVirus is more than{" "}
-            {parseInt(dead / deathCount911)} Septermber 11 deaths.
+            {parseInt(dead / deathCount911)} September 11 deaths.
           </li>
           <li>
             The death count of CoronaVirus is more than{" "}
@@ -68,6 +68,42 @@ function UnitedStates() {
             cholera.
           </li>
         </ul>
+      </div>
+      <div class="container">
+        <div class="usCard">
+          <h3 class="title">9/11</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle"></div>
+        </div>
+        <div class="usCard">
+          <h3 class="title">Polio</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+            Covid-19 has killed mor than {parseInt(dead / deathCount911)}
+          </div>
+        </div>
+        <div class="usCard">
+          <h3 class="title">Swine Flu</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle"></div>
+        </div>
+        <div class="usCard">
+          <h3 class="title">Cholera</h3>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle"></div>
+        </div>
       </div>
     </div>
   );

@@ -48,6 +48,12 @@ function Alabama() {
             </p>
           </div>
         </div>
+        <p className="worstCase">
+          In 2011, the super outbreak of tornadoes hit Alabama. With more than
+          362 confirmed tornadoes, an estimated 321 people lost there lives.
+          Covid-19 has killed more than {Math.floor(dead / 321)} times the
+          number of people in the State of Alabama.
+        </p>
         <div className="countycontainer">
           {error ? (
             <h1>{error.message}</h1>

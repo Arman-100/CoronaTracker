@@ -49,6 +49,14 @@ function Alaska() {
             </p>
           </div>
         </div>
+        <p className="worstCase">
+          On Friday before Easter 1964, Alaska saw the strongest earthquake ever
+          recorded in the United States. A 9.2 magnitude earthquake destroyed 75
+          houses, produced a 130 acre landslide, and claimed 120 lives. Covid-19
+          without any of the destruction, has already killed{" "}
+          {Math.round(100 - (dead / 120) * 100)}% of the amount of people that
+          died in that earthquake.
+        </p>
         <div className="countycontainer">
           {error ? (
             <h1>{error.message}</h1>

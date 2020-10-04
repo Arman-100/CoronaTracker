@@ -49,6 +49,11 @@ function Arizona() {
             </p>
           </div>
         </div>
+        <p className="worstCase">
+          Arizona's worst flash flood came on Labor day 1970, the storm claimed
+          23 people's lives, Covid-19 has killed {Math.floor(dead / 23)} times
+          the number of people in the State of Arizona.
+        </p>
         <div className="countycontainer">
           {error ? (
             <h1>{error.message}</h1>

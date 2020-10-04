@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="navBarContainer">
       <div className="navbar">
-        <a className="logo" href={Window}>
+        <a className="logo" href="/">
           {" "}
           The Corona Times
         </a>
