@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./dropdown.scss";
 
 const usStates = [
   { name: "UNITED STATES", abbreviation: "US" },

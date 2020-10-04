@@ -6,6 +6,7 @@ import {
 } from "../api/datacollection";
 import USMap from "../image/download.png";
 import "./UnitedStates.scss";
+import CoronaPic from "../image/coronaimage.jpg";
 
 function UnitedStates() {
   const [confirmed, setconfirmed] = useState("0");
@@ -24,8 +25,11 @@ function UnitedStates() {
 
   return (
     <div className="usContainer">
+      <div className="topArea">
+        <img src={CoronaPic} className="coronaPic" alt="" />
+      </div>
       <div className="usmap">
-        <img src={USMap} alt="" />
+        <img src={USMap} className="usPicture" alt="" />
         <div className="infoUs">
           <p className="status confirmed">
             Confirmed: <br />

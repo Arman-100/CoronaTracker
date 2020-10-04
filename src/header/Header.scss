@@ -1,25 +1,114 @@
 // @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
-.header-container {
-  background-color: rgb(255, 236, 127);
-  display: flex;
-  justify-content: space-around;
+// .header-container {
+//   background-color: rgb(255, 236, 127);
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+// .title {
+//   padding-top: 1em;
+//   padding-bottom: 1em;
+//   display: flex;
+//   justify-content: center;
+//   font-family: "Archivo Black", sans-serif;
+//   letter-spacing: 0.3em;
+//   word-spacing: 0.7em;
+// }
+
+// .select {
+//   display: grid;
+//   grid-template-columns: 3fr 1fr;
+
+//   justify-self: center;
+//   align-self: center;
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
 }
 
-.title {
-  padding-top: 1em;
-  padding-bottom: 1em;
+.navbar {
+  position: fixed;
   display: flex;
   justify-content: center;
-  font-family: "Archivo Black", sans-serif;
-  letter-spacing: 0.3em;
-  word-spacing: 0.7em;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #d4d7de;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+}
+.nav {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  margin-right: 15%;
+}
+.logo {
+  flex: 1 1 auto;
+  margin-left: 5%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 35px;
+  @media screen and (max-width: 1300px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 18px;
+    flex: 1.5 1.5 auto;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 14px;
+    flex: 2 2 auto;
+  }
 }
 
-.select {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+a {
+  margin: 15px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: #000;
+}
 
-  justify-self: center;
-  align-self: center;
+.about-area,
+.port-area,
+.service-area,
+.contact-area {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 700px;
+}
+.text-part {
+  width: 65%;
+  height: 80%;
+}
+.about-area {
+  background-color: #fefefe;
+}
+.port-area {
+  background-color: #262626;
+  color: #fff;
+}
+.service-area {
+  background-color: #fefefe;
+}
+.contact-area {
+  background-color: #262626;
+  color: #fff;
 }

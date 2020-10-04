@@ -51,23 +51,35 @@ function Maryland() {
           {error ? (
             <h1>{error.message}</h1>
           ) : (
-            counties.map(function (county, index) {
-              if (
-                county.location.split(", ")[1] === stateName &&
-                county.location.split(" ")[0] !== "Unassigned" &&
-                county.location.split(" ")[0] !== "Out"
-              ) {
-                return (
-                  <div className="card" key={index}>
-                    <h3>{county.location.split(",")[0]}</h3>
-                    <p>confirmed: {county.confirmed}</p>
-                    <p>dead: {county.dead}</p>
-                  </div>
-                );
-              } else {
-                return null;
-              }
-            })
+            counties
+              .sort((a, b) => {
+                let nameA = a.location.toUpperCase();
+                let nameB = b.location.toUpperCase();
+                if (nameA < nameB) {
+                  return -1;
+                }
+                if (nameA > nameB) {
+                  return 1;
+                }
+                return 0;
+              })
+              .map(function (county, index) {
+                if (
+                  county.location.split(", ")[1] === stateName &&
+                  county.location.split(" ")[0] !== "Unassigned" &&
+                  county.location.split(" ")[0] !== "Out"
+                ) {
+                  return (
+                    <div className="card" key={index}>
+                      <h3>{county.location.split(",")[0]}</h3>
+                      <p>confirmed: {county.confirmed}</p>
+                      <p>dead: {county.dead}</p>
+                    </div>
+                  );
+                } else {
+                  return null;
+                }
+              })
           )}
         </div>
       </div>
