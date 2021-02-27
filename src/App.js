@@ -2,6 +2,7 @@ import React from "react";
 
 import UnitedStates from "./body/UnitedStates";
 import Header from "./header/Header";
+import Footer from "./footer/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Alabama from "./body/statesFolder/alabama";
 import Alaska from "./body/statesFolder/alaska";
@@ -112,6 +113,7 @@ function App() {
         <Route path="/WestVirginia" exact component={WestVirginia}></Route> 
         <Route path="/Wisconson" exact component={Wisconson}></Route> 
         <Route path="/Wyoming" exact component={Wyoming}></Route>
+        <Route path="/" component={Footer}></Route>
       </div>
     </Router>
   );

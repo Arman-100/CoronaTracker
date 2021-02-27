@@ -47,27 +47,6 @@ function UnitedStates() {
       </div>
       <div className="facts">
         <h1 className="factsTitle">Relative Severity Facts</h1>
-        <ul>
-          <li>
-            The death count of CoronaVirus is more than{" "}
-            {parseInt(dead / deathCount911)} September 11 deaths.
-          </li>
-          <li>
-            The death count of CoronaVirus is more than{" "}
-            {parseInt(dead / polioDeathCount)} times the number of people who
-            suffered and died painfully from Polio.
-          </li>
-          <li>
-            The death count of CoronaVirus is more than{" "}
-            {parseInt(dead / swineFluDeathCount)} times the number of people who
-            died from swine flu (H1N1).
-          </li>
-          <li>
-            The death count of CoronaVirus is more than{" "}
-            {parseInt(dead / choleraDeathCount)} times the people who died to
-            cholera.
-          </li>
-        </ul>
       </div>
       <div class="container">
         <div class="usCard">
@@ -76,7 +55,10 @@ function UnitedStates() {
             <div class="emptybar"></div>
             <div class="filledbar"></div>
           </div>
-          <div class="circle"></div>
+          <div class="circle">
+            Covid-19 has killed more than {parseInt(dead / deathCount911)} times
+            the people who lost their lives in the September 11 attacks.
+          </div>
         </div>
         <div class="usCard">
           <h3 class="title">Polio</h3>
@@ -85,7 +67,9 @@ function UnitedStates() {
             <div class="filledbar"></div>
           </div>
           <div class="circle">
-            Covid-19 has killed mor than {parseInt(dead / deathCount911)}
+            The death count of Covid-19 is more than{" "}
+            {parseInt(dead / polioDeathCount)} times the number of people who
+            suffered and died painfully from Polio.
           </div>
         </div>
         <div class="usCard">
@@ -94,7 +78,11 @@ function UnitedStates() {
             <div class="emptybar"></div>
             <div class="filledbar"></div>
           </div>
-          <div class="circle"></div>
+          <div class="circle">
+            The death count of Covid-19 is more than{" "}
+            {parseInt(dead / swineFluDeathCount)} times the number of people who
+            died from swine flu (H1N1).
+          </div>
         </div>
         <div class="usCard">
           <h3 class="title">Cholera</h3>
@@ -102,7 +90,11 @@ function UnitedStates() {
             <div class="emptybar"></div>
             <div class="filledbar"></div>
           </div>
-          <div class="circle"></div>
+          <div class="circle">
+            The death count of CoronaVirus is more than{" "}
+            {parseInt(dead / choleraDeathCount)} times the people who died to
+            cholera.
+          </div>
         </div>
       </div>
     </div>

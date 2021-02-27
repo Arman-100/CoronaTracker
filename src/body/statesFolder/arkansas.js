@@ -47,6 +47,7 @@ function Arkansas() {
             </p>
           </div>
         </div>
+        <p className="worstCase"></p>
         <div className="countycontainer">
           {error ? (
             <h1>{error.message}</h1>

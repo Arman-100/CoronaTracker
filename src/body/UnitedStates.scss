@@ -141,29 +141,29 @@
 .usCard {
   display: flex;
   justify-content: center;
-  height: 280px;
-  width: 200px;
+  height: 380px;
+  width: 250px;
   background-color: #615c6bef;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: -1rem 0 3rem #000;
   /*   margin-left: -50px; */
-  transition: 0.4s ease-out;
+  transition: 0.1s ease-out;
   position: relative;
   left: 0px;
 }
 
 .usCard:not(:first-child) {
-  margin-left: -50px;
+  margin-left: -70px;
 }
 
 .usCard:hover {
-  transform: translateY(-20px);
+  transform: translateY(-30px);
   transition: 0.4s ease-out;
 }
 
 .usCard:hover ~ .usCard {
   position: relative;
-  left: 50px;
+  left: 80px;
   transition: 0.4s ease-out;
 }
 
@@ -173,6 +173,7 @@
   position: absolute;
   left: 20px;
   top: 15px;
+  font-size: 1.5em;
 }
 
 .bar {
@@ -185,7 +186,7 @@
 
 .emptybar {
   background-color: #2e3033;
-  width: 100%;
+  width: 135%;
   height: 100%;
 }
 
@@ -196,8 +197,9 @@
 
 .circle {
   position: absolute;
-  top: 150px;
-  left: calc(50% - 60px);
+  top: 120px;
+  left: calc(30% - 45px);
+  padding-right: 30px;
 }
 
 svg {
